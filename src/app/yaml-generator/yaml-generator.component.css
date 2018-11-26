@@ -1,0 +1,33 @@
+li.step{
+    border: 1px solid gray;
+    padding: 20px;
+    width: 400px;
+    margin-bottom: 20px;
+    background: rgba(255, 254, 254, 0.65);
+    float: left;
+    margin-left: 10px;
+}
+
+.steps{
+    clear: both;
+    overflow: hidden;
+}
+
+#result-container{
+    border: 1px solid gray;
+    padding: 20px;
+    max-width: 80%;
+    margin-bottom: 20px;
+    background: rgba(255, 254, 254, 0.65);
+    float: left;
+}
+
+#add-step-btn, #copy-result{
+    padding: 10px;
+    font-size: 19px;
+}
+
+#builder-section{
+    margin-bottom: 50px;
+}
+

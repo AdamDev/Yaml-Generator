@@ -1,0 +1,91 @@
+<div *ngIf="step" class="step-container">
+    <div class="step-title">Name:
+        <input [(ngModel)]="step.name" placeholder="Name" type="text"/>
+    </div>
+  <div class="step-title">Title:
+      <input [(ngModel)]="step.title" placeholder="Title" type="text"/>
+  </div>
+  <div class="step-title">Description:
+      <input [(ngModel)]="step.description" placeholder="Image" type="text"/>
+  </div>
+  <div class="step-title">Image:
+      <input [(ngModel)]="step.image" placeholder="Image" type="text"/>
+  </div>
+  <div class="step-title">Working Directory:
+      <input [(ngModel)]="step.workingDirectory" placeholder="Image" type="text"/>
+  </div>
+  <div class="step-title">Commands:
+      <ul class="cmd" >
+          <li *ngFor="let cmd of step.commands">
+              <button class="delete-c" title="Delete"
+              (click)="deleteItemFromArray(cmd, 1)">x</button>
+              <input [(ngModel)]="cmd.key" placeholder="Command" type="text"/>            
+          </li>
+          <div>
+              <button class="add-c" title="Add"
+              (click)="createNewItemInArray(1)">+ Command</button>
+          </div>
+        </ul>
+  </div>
+  <div class="step-title">Cmd:
+      <ul class="cmd" >
+          <li *ngFor="let cmd of step.cmd">
+              <button class="delete-c" title="Delete"
+              (click)="deleteItemFromArray(cmd, 2)">x</button>
+              <input [(ngModel)]="cmd.key" placeholder="Cmd" type="text"/>            
+          </li>
+          <div>
+              <button class="add-c" title="Add"
+              (click)="createNewItemInArray(2)">+ Cmd</button>
+          </div>
+        </ul>
+  </div>
+  <div class="step-title">Environment:
+      <ul class="cmd" >
+          <li *ngFor="let cmd of step.environment">
+              <button class="delete-c" title="Delete"
+              (click)="deleteItemFromArray(cmd, 3)">x</button>
+              <input [(ngModel)]="cmd.key" placeholder="Environment" type="text"/>            
+          </li>
+          <div>
+              <button class="add-c" title="Add"
+              (click)="createNewItemInArray(3)">+ Environment</button>
+          </div>
+        </ul>
+  </div>
+  <div class="step-title">Entry Point:
+      <ul class="cmd" >
+          <li *ngFor="let cmd of step.entryPoint">
+              <button class="delete-c" title="Delete"
+              (click)="deleteItemFromArray(cmd, 4)">x</button>
+              <input [(ngModel)]="cmd.key" placeholder="Entry Point" type="text"/>            
+          </li>
+          <div>
+              <button class="add-c" title="Add"
+              (click)="createNewItemInArray(4)">+ Entry Point</button>
+          </div>
+        </ul>
+  </div> 
+
+  <div class="step-title">Fail Fast:
+      <input type="checkbox" [(ngModel)]="step.failFast" placeholder="FailFast"/>
+  </div>
+  <div class="step-title">When:
+      <input [(ngModel)]="step.when" placeholder="When" type="text"/>
+  </div>
+  <div class="step-title">On Success:
+      <input [(ngModel)]="step.onSuccess" placeholder="On Success" type="text"/>
+  </div>
+  <div class="step-title">On Fail:
+      <input [(ngModel)]="step.onFail" placeholder="On Fail" type="text"/>
+  </div>
+  <div class="step-title">On Finish:
+      <input [(ngModel)]="step.onFinish" placeholder="On Finish" type="text"/>
+  </div>
+  <div class="step-title">Retry:
+      <input [(ngModel)]="step.retry" placeholder="Retry" type="text"/>
+  </div>
+
+
+</div>
+

@@ -1,0 +1,26 @@
+<h1>Yaml Generator</h1>
+
+<section id="builder-section">
+  <ul class="steps" [sortablejs]="steps"> 
+    <li class="step" *ngFor="let step of steps">
+      <button class="delete rfloat" title="delete step"
+      (click)="delete(step)">x</button>
+      <app-yaml-step [step]="step"></app-yaml-step>
+    </li>
+  </ul>
+
+  <div>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="addNew()" id="add-step-btn">
+      Add Step
+    </button>
+  </div>
+</section>
+<section id="result-section">
+  <h2>Result:</h2>
+  <div><button (click)="copy()" id="copy-result">Copy</button></div>  
+  
+    <div id="result-container" [innerHTML] = getStepsAsText()>
+    </div>     
+</section>
+

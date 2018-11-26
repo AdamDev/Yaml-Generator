@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+ul{
+    list-style: none;
+}
+
+body{
+    background-color: rgba(230,230,230,0.65);
+}
+
+.rfloat{
+    float : right;
+}
+.lfloat{
+    float : left;
+}
+
+
